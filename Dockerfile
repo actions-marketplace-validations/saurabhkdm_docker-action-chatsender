@@ -8,4 +8,4 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "messagesender.py" ]
+CMD [ "bash", "entrypoint.sh" ]

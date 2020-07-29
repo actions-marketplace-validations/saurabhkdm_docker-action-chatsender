@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-python /app/messagesender.py GITHUB_REF
+python /app/messagesender.py $GITHUB_REF

@@ -9,7 +9,7 @@ def main():
     mod_msg = "Something push against branch"+msg
     url = 'https://chat.googleapis.com/v1/spaces/AAAAW92x_Vw/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=YhnS-MnqheNDK2l4rdddHVN2SZNN_0UbhkLQCZIQ2bM%3D'
     bot_message = {
-        'text' : msg}
+        'text' : mod_msg}
     
 
     message_headers = {'Content-Type': 'application/json; charset=UTF-8'}

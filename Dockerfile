@@ -1,11 +1,12 @@
-FROM ubuntu:latest
+FROM python:3.6
 
-COPY .  /.
+# Create app directory
+WORKDIR /app
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3.7 \
-    python3-pip \
+# Install app dependencies
+COPY . .
 
-RUN pip3 install json httplib2
+RUN pip install -r requirements.txt
 
-ENTRYPOINT ["/entrypoint.sh"]
+EXPOSE 8080
+CMD [ "python", "messagesender.py" ]

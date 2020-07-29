@@ -1,10 +1,10 @@
 FROM python:3.6
 
 # Create app directory
-WORKDIR .
+WORKDIR /app
 
 # Install app dependencies
-COPY . .
+COPY . /app
 
 RUN pip install -r requirements.txt
 

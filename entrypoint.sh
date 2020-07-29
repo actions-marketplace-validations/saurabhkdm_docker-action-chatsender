@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-python messagesender.py
+python /app/messagesender.py

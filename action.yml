@@ -1,0 +1,11 @@
+name: 'Hello World!'
+description: 'Send msg and shut down'
+inputs:
+    chat-channel:'https://chat.googleapis.com/v1/spaces/AAAAW92x_Vw/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=YhnS-MnqheNDK2l4rdddHVN2SZNN_0UbhkLQCZIQ2bM%3D'
+outputs:
+    description: 'Image has been pushed'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.chat-channel }}

@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-python /app/messagesender.py
+python /app/messagesender.py $1

@@ -1,11 +1,16 @@
-name: 'Hello World!'
-description: 'Send msg and shut down'
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
-    chat-channel:'https://chat.googleapis.com/v1/spaces/AAAAW92x_Vw/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=YhnS-MnqheNDK2l4rdddHVN2SZNN_0UbhkLQCZIQ2bM%3D'
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
 outputs:
-    description: 'Image has been pushed'
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args:
-        - ${{ inputs.chat-channel }}
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}

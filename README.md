@@ -1,4 +1,4 @@
-# docker-action-chatsender
+# Google Chat Channel Notifier
 Github Docker action for Google Chat
 
 

@@ -6,7 +6,8 @@ from httplib2 import Http
 def main():
     """Hangouts Chat incoming webhook quickstart."""
     msg = sys.argv[1]
-    mod_msg = "Something push against branch"+msg
+    mod_msg = "Something push against branch"
+    print(msg)
     url = 'Chat_Channel_web_hook'
     bot_message = {
         'text' : mod_msg}

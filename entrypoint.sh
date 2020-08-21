@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
-pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
 
 
 
-python /app/messagesender.py $pull_number
+python /app/messagesender.py $PR_NUMBER

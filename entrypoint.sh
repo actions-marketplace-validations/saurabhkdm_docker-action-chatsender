@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-python /app/messagesender.py $GITHUB_ACTOR
+python /app/messagesender.py ${{github.event.number}}

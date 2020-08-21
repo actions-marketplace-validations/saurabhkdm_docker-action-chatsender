@@ -1,7 +1,6 @@
 #!/bin/sh -l
 
-PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
-
+PR_NUMBER=${{github.event.number}
 
 
 python /app/messagesender.py $PR_NUMBER
